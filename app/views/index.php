@@ -10,14 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/script.js"></script>
-    <script src="js/particles.min.js"></script>
-    <style>
-        #realPic {
-            z-index: 1000;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/main.css">
+    <script src="http://takshak.in/2017dev/public/assets/js/script.js"></script>
+    <script src="http://takshak.in/2017dev/public/assets/js/particles.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +20,7 @@
         <div class="container">
             <br><br><br><br><br>
             <center>
-                <img src="img/logo.png"><br>
+                <img src="http://takshak.in/2017dev/public/assets/img/new/logo.png"><br>
                 <span class="subtitle">BEGIN WITHIN</span><br/> 2017 SEPTEMBER 22,23<br>
             </center>
         </div>
@@ -52,11 +47,11 @@
                         year. This time it's out to rekindle the fire within and awaken the sleeping spirit of innovation.
                     </p>
                 </div>
-                <div class="col-sm-6"><br><br><br><img src="img/mace-watercolor.png" style="width: 100%"></div>
+                <div class="col-sm-6"><br><br><br><img src="http://takshak.in/2017dev/public/assets/img/new/mace-watercolor.png" style="width: 100%"></div>
             </div>
         </div>
     </section>
-    <section class="screenfit events" style="background: url(img/sea.jpg);background-size: 100% 100%; ">
+    <section class="screenfit events" style="background: url(http://takshak.in/2017dev/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
         <div class="container">
             <br>
             <!-- <h1 id="status" style="color: #EEEEEE">Events</h1> -->
@@ -65,7 +60,7 @@
             <!-- </center> -->
         </div>
     </section>
-    <section class="sponsors screenfit" style="background: url(img/texture-paper-1.jpg);padding-bottom:80px;">
+    <section class="sponsors screenfit" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
         <div class="container" style="line-height: 24px;">
             <h1 style="padding:60px 0 20px;font-size: 42px;font-weight: bold;color: #4b3829;text-shadow: 0 2px 2px rgba(0,0,0,0.1); ">Sponsors</h1>
             <div class="row">
@@ -165,7 +160,7 @@
             </div>
         </div>
     </section>
-    <section class="screenfit contacts" style="background: url(img/texture-paper-1.jpg);">
+    <section class="screenfit contacts" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);">
         <div class="container">
             <center>
                 <h3 style="font-size: 24px; font-weight: bold; margin: 70px 0 0 ; padding: 8px 8px; color:#4b3829;border:3px solid #4b3829; border-width: 3px 0; letter-spacing: 5px;display: inline-block;">FOLLOW US</h3><br>
@@ -182,7 +177,7 @@
                             <a href="#" class="twitter">Twitter</a>
                         </div>
                         <br/><br/><br/>
-                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="#">Jospeh Aswin</a></span>
+                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="https://www.linkedin.com/in/joseph-ashwin-kottapurath-84b33011a/">Jospeh Ashwin</a></span>
                     </div>
                     <div class="col-sm-8">
                         <div class="table">
@@ -262,7 +257,7 @@
             </center>
         </div>
     </section>
-    <div class="intro-map-bg screenfit" style="background-image: url(img/mapbg1.jpg) "></div>
+    <div class="intro-map-bg screenfit" style="background-image: url(http://takshak.in/2017dev/public/assets/img/new/mapbg1.jpg) "></div>
     <nav class="navig">
         <ul>
             <li><a href="#" onclick="openpage('about');return false;">ABOUT</a></li>
@@ -282,17 +277,17 @@
         canvas.height = window.innerHeight - (window.innerHeight / 15);
         var mycanvas = canvas.getContext('2d');
         var building1 = new Image();
-        building1.src = "img/building1.png";
+        building1.src = "http://takshak.in/2017dev/public/assets/img/new/building1.png";
         var building2 = new Image();
-        building2.src = "img/building2.png";
+        building2.src = "http://takshak.in/2017dev/public/assets/img/new/building2.png";
         var building3 = new Image();
-        building3.src = "img/building3.png";
+        building3.src = "http://takshak.in/2017dev/public/assets/img/new/building3.png";
         var building4 = new Image();
-        building4.src = "img/building4.png";
+        building4.src = "http://takshak.in/2017dev/public/assets/img/new/building4.png";
         var building5 = new Image();
-        building5.src = "img/building5.png";
+        building5.src = "http://takshak.in/2017dev/public/assets/img/new/building5.png";
         var myImg = new Image();
-        myImg.src = "img/terrain2.png";
+        myImg.src = "http://takshak.in/2017dev/public/assets/img/new/terrain2.png";
         var status = document.getElementById("status");
         var yPrev = "";
         var height = (canvas.width / 3);
@@ -301,7 +296,7 @@
         var rectY = (canvas.height / 2) - (height / 2);
         var buildings = [{
             id: "building1",
-            src: "img/building1.png",
+            src: "http://takshak.in/2017dev/public/assets/img/new/building1.png",
             obj: building1,
             x: rectX + 130,
             y: rectY,
@@ -309,7 +304,7 @@
             Sy: 100
         }, {
             id: "building2",
-            src: "img/building2.png",
+            src: "http://takshak.in/2017dev/public/assets/img/new/building2.png",
             obj: building2,
             x: rectX + 60,
             y: rectY + 170,
@@ -317,7 +312,7 @@
             Sy: 80
         }, {
             id: "building3",
-            src: "img/building3.png",
+            src: "http://takshak.in/2017dev/public/assets/img/new/building3.png",
             obj: building3,
             x: rectX + 140,
             y: rectY + 310,
@@ -325,7 +320,7 @@
             Sy: 70
         }, {
             id: "building4",
-            src: "img/building4.png",
+            src: "http://takshak.in/2017dev/public/assets/img/new/building4.png",
             obj: building4,
             x: rectX + 400,
             y: rectY + 90,
@@ -333,7 +328,7 @@
             Sy: 100
         }, {
             id: "building5",
-            src: "img/building5.png",
+            src: "http://takshak.in/2017dev/public/assets/img/new/building5.png",
             obj: building5,
             x: rectX + 500,
             y: rectY + 210,
