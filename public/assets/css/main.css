@@ -19,14 +19,17 @@ section {
     color: #ffe0b0;
 }
 
+.home img.mainlogo {
+    max-width: 90%;
+}
+
 .intro-map-bg {
+    overflow: hidden;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: -999;
-    transition: all 1s linear;
-    -webkit-transition: all 6s linear;
     background-size: auto 100%;
 }
 
@@ -42,7 +45,7 @@ section {
 }
 
 .about {
-    background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);
+    background: url(../img/texture-paper-1.jpg);
 }
 
 .about h1 {
@@ -63,11 +66,16 @@ section {
 nav.navig {
     width: 100%;
     height: 50px;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     margin: 0;
     padding: 0;
+    display: none;
+}
+
+nav.navig.active {
+    display: block;
 }
 
 nav.navig ul {
@@ -100,7 +108,7 @@ nav.navig a:hover {
 div.backtohome {
     position: fixed;
     left: 0;
-    bottom: -40px;
+    bottom: -30px;
     text-align: center;
     width: 100%;
 }
@@ -109,9 +117,10 @@ div.backtohome a {
     text-decoration: none;
     display: inline-block;
     background: #FFFFFF;
-    width: 80px;
-    height: 80px;
-    line-height: 40px;
+    width: 100px;
+    height: 100px;
+    line-height: 70px;
+    font-size: 30px;
     border-radius: 50%;
     color: #333333;
     border: 5px solid #FFFFFF;
@@ -126,6 +135,10 @@ div.backtohome a:hover {
     height: 100px;
     bottom: -50px;
     line-height: 70px;
+}
+
+div.backtohome a .backclose {
+    display: none;
 }
 
 .contact_data {
@@ -177,7 +190,7 @@ div.backtohome a:hover {
     display: block;
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
     width: 100%;
-    background: #4b3829;
+    background: #544234;
     overflow: auto;
     padding: 20px;
     color: white;
@@ -193,6 +206,10 @@ div.backtohome a:hover {
     border-bottom: 1px solid #666666;
 }
 
+.hlite {
+    max-width: 300px;
+}
+
 .view {
     width: 100%;
     height: 450px;
@@ -202,7 +219,7 @@ div.backtohome a:hover {
     position: relative;
     text-align: center;
     cursor: default;
-    background: #fff url(http://takshak.in/2017dev/public/assets/img/new/bgimg.jpg) no-repeat center center
+    background: #fff url() no-repeat center center
 }
 
 .view .mask,
@@ -304,4 +321,130 @@ div.backtohome a:hover {
 .view-second:hover a.info {
     transform: translate(0px, 250px);
     transition-delay: 0.5s;
+}
+
+.event_popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FCFCFF;
+    background-image: url(../img/texture-paper-1.jpg);
+    overflow: auto;
+    display: none;
+    z-index: 45;
+}
+
+.content {
+    padding: 100px 0;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.evntby {
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+.depart {
+    text-align: center;
+    margin: 0 0 50px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #8b4900;
+}
+
+.evnt {
+    display: inline-block;
+    width: 100%;
+    min-width: 280px;
+    border-radius: 5px;
+    border: 3px solid #8b4900;
+    min-height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+    overflow: auto;
+    padding-bottom: 20px;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.evnt:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.evnt h4 {
+    color: #8b4900;
+    font-size: 17px;
+    padding: 15px 0 5px;
+    background: rgba(139, 73, 0, 0.15);
+    font-weight: bold;
+    margin: 0;
+}
+
+.evnt h5 {
+    margin: 0;
+    color: #222222;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    background: rgba(139, 73, 0, 0.15);
+    border-bottom: 1px dashed #8b4900;
+}
+
+.evnt p {
+    padding: 10px 25px;
+}
+
+.evnt .contact {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #8B4900;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.evnt button {
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    background: #8B4900;
+    color: #FFFFFF;
+    padding: 6px 20px;
+}
+
+.eventclose,
+.eventclose:hover,
+.eventclose:active,
+.eventclose:focus {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 26px;
+    color: #FFF;
+    position: fixed;
+    top: 35px;
+    left: 35px;
+    background-color: #693802;
+    border-radius: 50%;
+}
+
+.bgofevent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
 }

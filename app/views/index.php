@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takshak `17 | MACE</title>
 
     <!-- Bootstrap -->
@@ -11,16 +12,16 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/responsive.css">
     <script src="http://takshak.in/2017dev/public/assets/js/script.js"></script>
-    <script src="http://takshak.in/2017dev/public/assets/js/particles.min.js"></script>
 </head>
 
 <body>
-    <section class="screenfit home" style="color:#FFFFFF;display: block;">
+    <section class="screenfit home" style="color:#FFFFFF;display: block;" id="home">
         <div class="container">
             <br><br><br><br><br>
             <center>
-                <img src="http://takshak.in/2017dev/public/assets/img/new/logo.png"><br>
+                <img src="http://takshak.in/2017dev/public/assets/img/new/logo.png" class="mainlogo"><br>
                 <span class="subtitle">BEGIN WITHIN</span><br/> 2017 SEPTEMBER 22,23<br>
             </center>
         </div>
@@ -54,10 +55,8 @@
     <section class="screenfit events" style="background: url(http://takshak.in/2017dev/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
         <div class="container">
             <br>
-            <!-- <h1 id="status" style="color: #EEEEEE">Events</h1> -->
-            <!-- <p id="status" style="color: #EEEEEE">Events</p> -->
-            <canvas style="margin-left: -100px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
-            <!-- </center> -->
+            <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
+            <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
         </div>
     </section>
     <section class="sponsors screenfit" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
@@ -119,7 +118,7 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <span class="">
+                    <span class="hlite">
 						<div class="view view-second">
 							<img src="https://s-media-cache-ak0.pinimg.com/736x/e4/e1/a2/e4e1a2f1dadc89f81b3fff9ca97cdab6--split--split-movie-poster.jpg" />
 							<div class="mask"></div>
@@ -132,7 +131,7 @@
 					</span>
                 </div>
                 <div class="col-sm-4">
-                    <span class="">
+                    <span class="hlite">
 						<div class="view view-second">
 							<img src="https://s-media-cache-ak0.pinimg.com/736x/dc/24/8a/dc248a436359947a31bad659fda182ae--poster-harry-potter-harry-potter-hogwarts.jpg" />
 							<div class="mask"></div>
@@ -145,7 +144,7 @@
 					</span>
                 </div>
                 <div class="col-sm-4">
-                    <span class="">
+                    <span class="hlite">
 						<div class="view view-second">
 							<img src="https://i.pinimg.com/736x/03/51/5b/03515be21a1be105d415083f22602246--fantasy-films-poster-design.jpg" />
 							<div class="mask"></div>
@@ -177,7 +176,7 @@
                             <a href="#" class="twitter">Twitter</a>
                         </div>
                         <br/><br/><br/>
-                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="https://www.linkedin.com/in/joseph-ashwin-kottapurath-84b33011a/">Jospeh Ashwin</a></span>
+                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="#">Jospeh Aswin</a></span>
                     </div>
                     <div class="col-sm-8">
                         <div class="table">
@@ -257,8 +256,9 @@
             </center>
         </div>
     </section>
-    <div class="intro-map-bg screenfit" style="background-image: url(http://takshak.in/2017dev/public/assets/img/new/mapbg1.jpg) "></div>
-    <nav class="navig">
+    <div class="intro-map-bg screenfit"><img src="http://takshak.in/2017dev/public/assets/img/new/mapbg1.jpg" id="bgimage" style="height: 100%;transform:scale(2.4,2.4);transition: all 1500ms ease-out;"></div>
+
+    <nav class="navig active">
         <ul>
             <li><a href="#" onclick="openpage('about');return false;">ABOUT</a></li>
             <li><a href="#" onclick="openpage('events');return false;">EVENTS</a></li>
@@ -267,143 +267,27 @@
             <li><a href="#" onclick="openpage('contacts');return false;">FOLLOW US</a></li>
         </ul>
     </nav>
-    <div class="backtohome" style="display: none; z-index: 1000;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+
+    <div class="event_popup" style="background-image: url(http://takshak.in/2017dev/public/assets/img/new/event_civil.jpg)">
+        <div class="content" id="content">
+            <h3 class="evntby">EVENTS BY</h3>
+            <h1 class="depart" id="depart"></h1>
+        </div>
+        <a href="#" onclick="events('close');return false;" class="eventclose"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    </div>
+    <div class="backtohome" style="display: none;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up backup"></span><span class="glyphicon glyphicon-remove backclose"></span></a></div>
+    <div class="mobilenav"><a href="#" onclick="opennav();return false;"><span class="glyphicon glyphicon-align-justify"></span></a></div>
+    <script src="http://takshak.in/2017dev/public/assets/js/canvasAnimator.js"></script>
+    <script type="text/javascript">
+        divtitle = document.getElementById("home");
+        bg = document.getElementById("bgimage");
+        divtitle.addEventListener("mousemove", function(event) {
+            var mouseX = event.pageX;
+            var mouseY = event.pageY;
+            var scale = (mouseX / document.documentElement.clientWidth - 0.5) * 2;
+            bg.style.transform = "translate(" + (-mouseX + document.documentElement.clientWidth / 2) + "px," + (-mouseY + document.documentElement.clientHeight / 2 - 130) + "px) scale(2.3,2.3) rotateZ(" + (10 * scale) + "deg)";
+        });
+    </script>
 </body>
-<script>
-    window.addEventListener("load", function() {
-        var canvas = document.getElementById('myCanvas');
-        var bounds = document.body.getBoundingClientRect();
-        canvas.width = bounds.right - 120;
-        canvas.height = window.innerHeight - (window.innerHeight / 15);
-        var mycanvas = canvas.getContext('2d');
-        var building1 = new Image();
-        building1.src = "http://takshak.in/2017dev/public/assets/img/new/building1.png";
-        var building2 = new Image();
-        building2.src = "http://takshak.in/2017dev/public/assets/img/new/building2.png";
-        var building3 = new Image();
-        building3.src = "http://takshak.in/2017dev/public/assets/img/new/building3.png";
-        var building4 = new Image();
-        building4.src = "http://takshak.in/2017dev/public/assets/img/new/building4.png";
-        var building5 = new Image();
-        building5.src = "http://takshak.in/2017dev/public/assets/img/new/building5.png";
-        var myImg = new Image();
-        myImg.src = "http://takshak.in/2017dev/public/assets/img/new/terrain2.png";
-        var status = document.getElementById("status");
-        var yPrev = "";
-        var height = (canvas.width / 3);
-        var width = (canvas.width / 2);
-        var rectX = (canvas.width / 2) - (width / 2);
-        var rectY = (canvas.height / 2) - (height / 2);
-        var buildings = [{
-            id: "building1",
-            src: "http://takshak.in/2017dev/public/assets/img/new/building1.png",
-            obj: building1,
-            x: rectX + 130,
-            y: rectY,
-            Sx: 100,
-            Sy: 100
-        }, {
-            id: "building2",
-            src: "http://takshak.in/2017dev/public/assets/img/new/building2.png",
-            obj: building2,
-            x: rectX + 60,
-            y: rectY + 170,
-            Sx: 100,
-            Sy: 80
-        }, {
-            id: "building3",
-            src: "http://takshak.in/2017dev/public/assets/img/new/building3.png",
-            obj: building3,
-            x: rectX + 140,
-            y: rectY + 310,
-            Sx: 70,
-            Sy: 70
-        }, {
-            id: "building4",
-            src: "http://takshak.in/2017dev/public/assets/img/new/building4.png",
-            obj: building4,
-            x: rectX + 400,
-            y: rectY + 90,
-            Sx: 120,
-            Sy: 100
-        }, {
-            id: "building5",
-            src: "http://takshak.in/2017dev/public/assets/img/new/building5.png",
-            obj: building5,
-            x: rectX + 500,
-            y: rectY + 210,
-            Sx: 100,
-            Sy: 100
-        }]
-        myImg.addEventListener("load", function() {
-            mycanvas.drawImage(myImg, rectX, rectY, width, height);
-            buildings.forEach(function(building) {
-                mycanvas.drawImage(building.obj, building.x, building.y, building.Sx, building.Sy);
-            });
-            canvas.addEventListener("mousemove", function(event) {
-                var mouseX = event.pageX - canvas.offsetLeft;
-                var mouseY = event.pageY - canvas.offsetTop;
-                mycanvas.clearRect(0, 0, canvas.width, canvas.height);
-                if (mouseY < (canvas.height / 2)) {
-                    var y = rectY + ((canvas.height / 2) - mouseY);
-                    if (y < rectY) {
-                        y = yPrev;
-                    }
-                } else {
-                    var y = ((canvas.height / 2) - mouseY / 2);
-                }
-                if (mouseX < ((canvas.width / 2) - 250)) {
-                    var x = ((canvas.width / 2)) + 466 - (mouseX * 2);
-                    mycanvas.drawImage(myImg, x, y, (mouseX * 1.5), (mouseX));
-                } else {
-                    if (mouseX > ((canvas.width / 2) + 260)) {
-                        var x = ((canvas.width / 2)) - (mouseX / 3);
-                        mycanvas.drawImage(myImg, x, y, ((canvas.width - mouseX) * 1.5), (canvas.width - mouseX));
-                    } else {
-                        mycanvas.drawImage(myImg, rectX, rectY, width, height);
-                        buildings.forEach(function(building) {
-                            mycanvas.drawImage(building.obj, building.x, building.y, building.Sx, building.Sy);
-                        });
-                        buildings.forEach(function(building) {
-                            if (building.id == "building1") {
-                                if (((mouseX > building.x - 100) && (mouseX < (building.x + building.Sx + 100))) && ((mouseY > building.y) && (mouseY < building.Sy + 100))) {
-                                    // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                                    mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
-                                }
-                                return;
-                            }
-                            if (building.id == "building2") {
-                                if (((mouseX > (building.x - 150)) && (mouseX < (building.x + building.Sx + 150))) && ((mouseY > building.y) && (mouseY < building.Sy + 300))) {
-                                    // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                                    mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
-                                }
-                                return;
-                            }
-                            if (building.id == "building5") {
-                                if (((mouseX > (building.x - 180)) && (mouseX < (building.x + building.Sx + 350))) && ((mouseY > (building.y - 10)) && (mouseY < building.Sy + 350))) {
-                                    // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                                    mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
-                                }
-                                return;
-                            }
-                            if (building.id == "building3") {
-                                if (((mouseX > (building.x - 350)) && (mouseX < (building.x + building.Sx + 200))) && ((mouseY > (building.y - 20)) && (mouseY < building.Sy + 400))) {
-                                    // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                                    mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
-                                }
-                                return;
-                            }
-                            if (((mouseX > building.x - 100) && (mouseX < (building.x + building.Sx + 100))) && ((mouseY > building.y) && (mouseY < building.Sy + 200))) {
-                                // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                                mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
-                            }
-                        });
-                    }
-                }
-                yPrev = y;
-            }, false);
-        }, false);
-    }, false);
-</script>
 
 </html>
