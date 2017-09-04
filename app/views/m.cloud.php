@@ -630,7 +630,8 @@
                                     <a href="http://takshak.in/2017/public/wearabletechnology">Wearable Technology Workshop 2017</a><br><br>
                                     <a href="http://takshak.in/2017/public/robogenesis">Robogenesis Autobots Workshop 2017</a><br><br>
 									<a href="http://takshak.in/2017/public/crossover">Crossover 2017</a><br><br>
-									<a href="http://takshak.in/2017/public/prayaan">Prayaan 2017</a>
+									<a href="http://takshak.in/2017/public/prayaan">Prayaan 2017</a><br><br>
+									<a href="http://takshak.in/2017/public/jugaadit">Jugaad IT 2017</a>
                                 </div>
 
                             </div>
