@@ -184,7 +184,7 @@ $cost = "";
                     <h1><strong>Robo Genesis Workshop 2017</strong> Registration</h1>
                     <div class="description">
                         <p>
-                            <b>Robo Genesis Workshop,</b> On behalf of the IIT GUWAHATI and ROBOTECH LABS, the ECE department of MAR ATHANASUIS COLLEGE OF ENGINEERING  proudly presentd a 2 day workshop on the  22nd and 23rd of september,2017.
+                            <b>Robo Genesis Workshop,</b> On behalf of the IIT GUWAHATI and ROBOTECH LABS, the ECE department of MAR ATHANASUIS COLLEGE OF ENGINEERING  proudly presentd a 2 day workshop on the  21 st and 22nd of september,2017.
                         </p>
                     </div>
                     <div class="top-big-link">
