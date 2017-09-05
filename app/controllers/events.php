@@ -12,7 +12,7 @@ class events extends controller{
             $this->deliverJSONResponse(200, "recordFound", $html);
         }
         else{
-            $this->deliverJSONResponse(500, "Database Connection Error", $this->error);
+            $this->deliverJSONResponse(500, "Database Connection Errors", $this->error);
         }
     }
 
@@ -34,6 +34,7 @@ class events extends controller{
             $result->bindParam(":dept", $dept);
             $result->execute();
             $data = $result->fetchAll(PDO::FETCH_ASSOC);
+            $this->error = $data;
             return $data;
         }
         else{

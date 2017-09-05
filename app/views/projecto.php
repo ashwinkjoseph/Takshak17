@@ -41,7 +41,7 @@ $cost = "";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cross Over 2017 | Registeration</title>
+    <title>Projecto 2017 | Registeration</title>
 
     <!-- CSS -->
 
@@ -181,10 +181,10 @@ $cost = "";
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text">
                     <a href="#"><img style="height:150px;" src="http://takshak.in/2017/public/images/projecto.png"></a>
-                    <h1><strong>Cross Over 2017</strong> Registration</h1>
+                    <h1><strong>Projecto 2017</strong> Registration</h1>
                     <div class="description">
                         <p>
-                            <b>Cross Over,</b> is a group event in which participants have to model a bridge with their own design creativity using the materials provided.
+                            <b>Projecto,</b> is a logo designing competition aimed at bringing the creativiity out of the participants
                         </p>
                     </div>
                     <div class="top-big-link">

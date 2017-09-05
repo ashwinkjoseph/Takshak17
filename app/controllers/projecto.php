@@ -6,7 +6,7 @@
  * Time: 23:55
  */
 
-class crossover extends controller
+class projecto extends controller
 {
     public function index(){
         $this->view("projecto");
