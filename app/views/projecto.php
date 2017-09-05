@@ -240,6 +240,7 @@ $cost = "";
                         <input type="text" name="form-class" placeholder="Department*" class="form-class form-control" id="form-class">
                     </div>
                     <hr/>
+                    <span style="color:red">Payment details will be given later, fee is 200 Rupees</span>
                     <button type="submit" class="btn">Send The Form &amp; Register</button>
                 </form>
 

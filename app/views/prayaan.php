@@ -315,7 +315,7 @@ $cost = "";
                     </div>
 
                     <hr/>
-                    <span style="color:red">Payment details will be given later, fee is 1350 Rupees</span>
+                    <span style="color:red">Payment details will be given later, fee is 150 Rupees</span>
                     <button type="submit" class="btn">Send The Form &amp; Register</button>
                 </form>
 
