@@ -120,12 +120,12 @@
                 <div class="col-sm-4">
                     <span class="hlite">
 						<div class="view view-second">
-							<img src="https://s-media-cache-ak0.pinimg.com/736x/e4/e1/a2/e4e1a2f1dadc89f81b3fff9ca97cdab6--split--split-movie-poster.jpg" />
+							<img src="http://localhost/Takshak17/public/images/autoshow.jpg" />
 							<div class="mask"></div>
 							<div class="content">
-								<h2>Hover Style #2</h2>
+								<h2>Auto Show</h2>
 								<p>Some description</p>
-								<a href="#" class="info">Read More</a>
+								<a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
 							</div>
 						</div>
 					</span>
@@ -133,12 +133,12 @@
                 <div class="col-sm-4">
                     <span class="hlite">
 						<div class="view view-second">
-							<img src="https://s-media-cache-ak0.pinimg.com/736x/dc/24/8a/dc248a436359947a31bad659fda182ae--poster-harry-potter-harry-potter-hogwarts.jpg" />
+							<img src="http://localhost/Takshak17/public/images/bmx.jpg" />
 							<div class="mask"></div>
 							<div class="content">
-								<h2>Hover Style #2</h2>
+								<h2>BMX</h2>
 								<p>Some description</p>
-								<a href="#" class="info">Read More</a>
+								<a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
 							</div>
 						</div>
 					</span>
@@ -187,68 +187,78 @@
                                     <td>+91485 2822363</td>
                                 </tr>
                                 <tr>
-                                    <th>STAFF COORDINATOR</th>
-                                    <td>Dr. Binu Markose</td>
-                                    <td>+91 9447217349</td>
+                                    <th>COORDINATOR</th>
+                                    <td>Mr. Mohammed Sahal TK</td>
+                                    <td>+91 7736876187</td>
                                 </tr>
                                 <tr>
                                     <th>CONVENOR</th>
-                                    <td>Mr. KM Rijas M</td>
-                                    <td>+91 9496103576</td>
+                                    <td>Mr. Bennet Benny</td>
+                                    <td>+91 8281240420</td>
                                 </tr>
                                 <tr>
                                     <th>EVENTS HEAD</th>
-                                    <td>Mr. Sanju K Sunny</td>
-                                    <td>+91 9497011157</td>
+                                    <td>Mr. Ren Shibu</td>
+                                    <td>+91 9539700666</td>
                                 </tr>
                                 <tr>
                                     <th>EVENTS HEAD</th>
-                                    <td>Mr. Adil M Basheer</td>
-                                    <td>+91 8606050434</td>
+                                    <td>Mr. Felix Boban</td>
+                                    <td>+91 8075178751</td>
+                                </tr>
+                                <tr>
+                                    <th>EVENTS HEAD</th>
+                                    <td>Mr. Shilpa joseph</td>
+                                    <td>+91 9497029418</td>
                                 </tr>
                                 <tr>
                                     <th>FINANCE HEAD</th>
-                                    <td>Mr. Sanjay PR</td>
-                                    <td>+91 7736822647</td>
+                                    <td>Mr. Malik Ibnu easa</td>
+                                    <td>+91 8281854922</td>
+                                </tr>
+                                <tr>
+                                    <th>FINANCE HEAD</th>
+                                    <td>Mr. Rhwitwik Ms</td>
+                                    <td>+91 9497650415</td>
                                 </tr>
                                 <tr>
                                     <th>SPONSORSHIP HEAD</th>
-                                    <td>Mr. Basil John</td>
-                                    <td>+91 9446740829</td>
+                                    <td>Mr. Nevin joseph</td>
+                                    <td>+91 7558800983</td>
                                 </tr>
                                 <tr>
                                     <th>SPONSORSHIP HEAD</th>
-                                    <td>Mr. Alen Jeyu</td>
-                                    <td>+91 9539256292 </td>
+                                    <td>Mr. Ajay Shibu</td>
+                                    <td>+91 8301876139 </td>
                                 </tr>
                                 <tr>
                                     <th>PUBLICITY HEAD</th>
-                                    <td>Mr. Rishi Prasad</td>
-                                    <td>+91 9388800836</td>
+                                    <td>Mr. Earnest George</td>
+                                    <td>+91 9846497450</td>
                                 </tr>
                                 <tr>
                                     <th>PUBLICITY HEAD</th>
-                                    <td>Ms. Aswathy Das</td>
-                                    <td>+91 9495003409</td>
+                                    <td>Ms. Jefin joseph</td>
+                                    <td>+91 8301087601</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <th>DECORATIONS HEAD</th>
                                     <td>Mr. Nikhin Raj KK</td>
                                     <td>+91 9605366056</td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <th>DESIGN HEAD</th>
-                                    <td>Mr. Kuncheria Kuruvilla</td>
-                                    <td>+91 8547946349</td>
+                                    <td>Mr. Bony Mons</td>
+                                    <td>+91 8547203643</td>
                                 </tr>
                                 <tr>
                                     <th>WEB DEV . TECHNICAL</th>
-                                    <td>Mr. Prince Raju</td>
-                                    <td>+91 8281073752</td>
+                                    <td>Mr. Joseph Ashwin Kottapurath</td>
+                                    <td>+91 9745511318</td>
                                 </tr>
                             </table>
                             <br><br>
-                            <b><u>SUPPORTING CREW</u></b><br><br>DEEPAK D, NIHAL MUNEER, KANNAN HJ, JYOTHISH KUMAR,<br> ASWATHY AJ, POORNIMA PHILIP, SNEHA SAJUMON,<br> AATHIRA MARIA JOSE,AJAI JOY ,BASIL SUNNY
+                            <b><u>SUPPORTING CREW</u></b><br><br>John,Mishal Aboobacker,Sreenath,Akshay Ramachandran,<br> Amjad Bin Raji,Rishan S ali,Abey,<br> Deepak,Mathews Joseph,Adarsh Jith<br> Abay Balan, Romariyo Johnson,Anjaly Kumaran
                         </div>
                     </div>
                 </div>
