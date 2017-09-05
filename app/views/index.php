@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/Takshak17/public/assets/css/main.css"> -->
     <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/responsive.css">
     <script src="http://takshak.in/2017dev/public/assets/js/script.js"></script>
 </head>
@@ -52,12 +53,56 @@
             </div>
         </div>
     </section>
-    <section class="screenfit events" style="background: url(http://takshak.in/2017dev/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
-        <div class="container">
-            <br>
-            <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
-            <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
+    <section class="screenfit events">
+        <div class="deskview"  style="background: url(http://takshak.in/2017dev/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
+            <div class="container">
+                <br>
+                <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
+                <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
+            </div>
         </div>
+        <div class="mobview"  style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);">
+            <div class="container">
+                <h1>EVENTS</h1>
+                <p>[ Select a department to view Events under it ]</p><br/>
+                <span class="depart_mob">
+                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                   <span class="dep_title">
+                       <span class="ttle">Computer Department</span>
+                       <span class="evts">Total 14 Events</span>
+                    </span>
+                </span>
+                <span class="depart_mob">
+                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                   <span class="dep_title">
+                       <span class="ttle">Civil Department</span>
+                       <span class="evts">Total 10 Events</span>
+                    </span>
+                </span>
+                <span class="depart_mob">
+                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                   <span class="dep_title">
+                       <span class="ttle">Mechanical Department</span>
+                       <span class="evts">Total 18 Events</span>
+                    </span>
+                </span>
+                <span class="depart_mob">
+                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                   <span class="dep_title">
+                       <span class="ttle">EEE Department</span>
+                       <span class="evts">Total 18 Events</span>
+                    </span>
+                </span>
+                <span class="depart_mob">
+                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                   <span class="dep_title">
+                       <span class="ttle">EC Department</span>
+                       <span class="evts">Total 18 Events</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+
     </section>
     <section class="sponsors screenfit" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
         <div class="container" style="line-height: 24px;">
@@ -117,45 +162,30 @@
             </center>
 
             <div class="row">
-                <div class="col-sm-4">
-                    <span class="hlite">
-						<div class="view view-second">
-							<img src="http://localhost/Takshak17/public/images/autoshow.jpg" />
-							<div class="mask"></div>
-							<div class="content">
-								<h2>Auto Show</h2>
-								<p>Some description</p>
-								<a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
-							</div>
-						</div>
-					</span>
-                </div>
-                <div class="col-sm-4">
-                    <span class="hlite">
-						<div class="view view-second">
-							<img src="http://localhost/Takshak17/public/images/bmx.jpg" />
-							<div class="mask"></div>
-							<div class="content">
-								<h2>BMX</h2>
-								<p>Some description</p>
-								<a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
-							</div>
-						</div>
-					</span>
-                </div>
-                <div class="col-sm-4">
-                    <span class="hlite">
-						<div class="view view-second">
-							<img src="https://i.pinimg.com/736x/03/51/5b/03515be21a1be105d415083f22602246--fantasy-films-poster-design.jpg" />
-							<div class="mask"></div>
-							<div class="content">
-								<h2>Hover Style #2</h2>
-								<p>Some description</p>
-								<a href="#" class="info">Read More</a>
-							</div>
-						</div>
-					</span>
-                </div>
+                <span class="hlite">
+                    <div class="view view-second">
+                        <img src="http://localhost/Takshak17/public/images/autoshow.jpg" />
+                        <div class="mask"></div>
+                        <div class="hltcontent">
+                            <h2>Auto Show</h2>
+                            <p>Some description</p>
+                            <a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="row">
+                <span class="hlite">
+                    <div class="view view-second">
+                        <img src="http://localhost/Takshak17/public/images/bmx.jpg" />
+                        <div class="mask"></div>
+                        <div class="hltcontent">
+                            <h2>BMX</h2>
+                            <p>Some description</p>
+                            <a href="http://takshak.in/2017/public/autoshow" class="info">Read More</a>
+                        </div>
+                    </div>
+                </span>
             </div>
         </div>
     </section>
@@ -273,7 +303,7 @@
             <li><a href="#" onclick="openpage('about');return false;">ABOUT</a></li>
             <li><a href="#" onclick="openpage('events');return false;">EVENTS</a></li>
             <li><a href="#" onclick="openpage('sponsors');return false;">SPORNSORS</a></li>
-            <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li>
+            <!-- <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li> -->
             <li><a href="#" onclick="openpage('contacts');return false;">FOLLOW US</a></li>
         </ul>
     </nav>

@@ -32,8 +32,8 @@ class erudite extends controller
     protected function prepareEmail( $formData ) {
 
         // email fields: to, from, subject, and so on
-        $to = "rajjithesh55@gmail.com, soorajpradeep97@gmail.com, ashwinkjoseph@gmail.com";
-        $from = "hdworkshop@takshak.in";
+        $to = "kuruvillatm911@gmil.com, soorajpradeep97@gmail.com, ashwinkjoseph@gmail.com";
+        $from = "erudite@takshak.in";
         $subject ="New Registration for erudite Workshop";
         $message = "Uploaded File\n";
         $message .= "Name :". $formData['form-name']."\n";
