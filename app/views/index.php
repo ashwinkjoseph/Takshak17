@@ -303,7 +303,7 @@
             <li><a href="#" onclick="openpage('about');return false;">ABOUT</a></li>
             <li><a href="#" onclick="openpage('events');return false;">EVENTS</a></li>
             <li><a href="#" onclick="openpage('sponsors');return false;">SPORNSORS</a></li>
-            <!-- <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li> -->
+            <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li>
             <li><a href="#" onclick="openpage('contacts');return false;">FOLLOW US</a></li>
         </ul>
     </nav>
