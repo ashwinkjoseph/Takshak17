@@ -1,0 +1,40 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+# API keys and secrets
+.env
+
+# Coverage
+coverage
+
+# Dependency directory
+node_modules
+bower_components
+Takshak17Official
+Travel
+psds
+New folder
+
+# Editors
+.idea
+.vs
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
