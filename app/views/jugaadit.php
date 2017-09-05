@@ -214,7 +214,7 @@ $cost = "";
 
             <div class="modal-body">
 
-                <form role="form" action="http://takshak.in/2017/public/prayaan/submit" method="post" class="registration-form" enctype="multipart/form-data">
+                <form role="form" action="http://takshak.in/2017/public/jugaadit/submit" method="post" class="registration-form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="sr-only" for="form-college-name">College*</label>
                         <input type="text" name="form-college-name" placeholder="College*" class="form-college-name form-control" id="form-college-name">
