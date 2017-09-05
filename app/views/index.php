@@ -11,8 +11,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/script.js"></script>
-    <script src="js/particles.min.js"></script>
+    <script src="http://takshak.in/2017dev/public/assets/js/script.js"></script>
+    <!-- <script src="js/particles.min.js"></script> -->
     <style>
         #realPic {
             z-index: 1000;
