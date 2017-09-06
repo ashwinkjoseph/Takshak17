@@ -1,4 +1,5 @@
 window.addEventListener("load", function() {
+    clearTimeout(timeout);
     var mouseX = "sh";
     var mouseY = "";
     var canvas = document.getElementById('myCanvas');
@@ -7,17 +8,27 @@ window.addEventListener("load", function() {
     canvas.height = window.innerHeight - (window.innerHeight / 15);
     var mycanvas = canvas.getContext('2d');
     var building1 = new Image();
-    building1.src = "http://takshak.in/2017dev/public/assets/img/new/building1.png";
+    building1.src = "http://takshak.in/2017/public/assets/img/new/building1.png";
     var building2 = new Image();
-    building2.src = "http://takshak.in/2017dev/public/assets/img/new/building2.png";
+    building2.src = "http://takshak.in/2017/public/assets/img/new/building2.png";
     var building3 = new Image();
-    building3.src = "http://takshak.in/2017dev/public/assets/img/new/building3.png";
+    building3.src = "http://takshak.in/2017/public/assets/img/new/building3.png";
     var building4 = new Image();
-    building4.src = "http://takshak.in/2017dev/public/assets/img/new/building4.png";
+    building4.src = "http://takshak.in/2017/public/assets/img/new/building4.png";
     var building5 = new Image();
-    building5.src = "http://takshak.in/2017dev/public/assets/img/new/building5.png";
+    building5.src = "http://takshak.in/2017/public/assets/img/new/building5.png";
+    var block1 = new Image();
+    block1.src = "http://takshak.in/2017/public/assets/img/new/block1.png";
+    var block2 = new Image();
+    block2.src = "http://takshak.in/2017/public/assets/img/new/block2.png";
+    var block3 = new Image();
+    block3.src = "http://takshak.in/2017/public/assets/img/new/block3.png";
+    var block4 = new Image();
+    block4.src = "http://takshak.in/2017/public/assets/img/new/block4.png";
+    var block5 = new Image();
+    block5.src = "http://takshak.in/2017/public/assets/img/new/block5.png";
     var myImg = new Image();
-    myImg.src = "http://takshak.in/2017dev/public/assets/img/new/terrain2.png";
+    myImg.src = "http://takshak.in/2017/public/assets/img/new/terrain2.png";
     var status = document.getElementById("status");
     var yPrev = "";
     var height = (canvas.width / 3);
@@ -26,7 +37,7 @@ window.addEventListener("load", function() {
     var rectY = (canvas.height / 2) - (height / 2);
     var buildings = [{
         id: "building1",
-        src: "http://takshak.in/2017dev/public/assets/img/new/building1.png",
+        src: "http://takshak.in/2017/public/assets/img/new/building1.png",
         obj: building1,
         x: rectX + 130,
         y: rectY,
@@ -34,7 +45,7 @@ window.addEventListener("load", function() {
         Sy: 100
     }, {
         id: "building2",
-        src: "http://takshak.in/2017dev/public/assets/img/new/building2.png",
+        src: "http://takshak.in/2017/public/assets/img/new/building2.png",
         obj: building2,
         x: rectX + 60,
         y: rectY + 170,
@@ -42,7 +53,7 @@ window.addEventListener("load", function() {
         Sy: 80
     }, {
         id: "building3",
-        src: "http://takshak.in/2017dev/public/assets/img/new/building3.png",
+        src: "http://takshak.in/2017/public/assets/img/new/building3.png",
         obj: building3,
         x: rectX + 140,
         y: rectY + 310,
@@ -50,7 +61,7 @@ window.addEventListener("load", function() {
         Sy: 70
     }, {
         id: "building4",
-        src: "http://takshak.in/2017dev/public/assets/img/new/building4.png",
+        src: "http://takshak.in/2017/public/assets/img/new/building4.png",
         obj: building4,
         x: rectX + 400,
         y: rectY + 90,
@@ -58,13 +69,54 @@ window.addEventListener("load", function() {
         Sy: 100
     }, {
         id: "building5",
-        src: "http://takshak.in/2017dev/public/assets/img/new/building5.png",
+        src: "http://takshak.in/2017/public/assets/img/new/building5.png",
         obj: building5,
         x: rectX + 500,
         y: rectY + 210,
         Sx: 100,
         Sy: 100
-    }]
+    }];
+    var blocks = [{
+        id: "block1",
+        src: "http://takshak.in/2017/public/assets/img/new/block1.png",
+        obj: block1,
+        x: rectX + 130,
+        y: rectY,
+        Sx: 100,
+        Sy: 100
+    }, {
+        id: "block2",
+        src: "http://takshak.in/2017/public/assets/img/new/block2.png",
+        obj: block2,
+        x: rectX + 60,
+        y: rectY + 170,
+        Sx: 100,
+        Sy: 80
+    }, {
+        id: "block3",
+        src: "http://takshak.in/2017/public/assets/img/new/blovk3.png",
+        obj: block3,
+        x: rectX + 140,
+        y: rectY + 310,
+        Sx: 70,
+        Sy: 70
+    }, {
+        id: "block4",
+        src: "http://takshak.in/2017/public/assets/img/new/block4.png",
+        obj: block4,
+        x: rectX + 400,
+        y: rectY + 90,
+        Sx: 120,
+        Sy: 100
+    }, {
+        id: "block5",
+        src: "http://takshak.in/2017/public/assets/img/new/block5.png",
+        obj: block5,
+        x: rectX + 500,
+        y: rectY + 210,
+        Sx: 100,
+        Sy: 100
+    }];
     myImg.addEventListener("load", function() {
         $("#eventLoader").remove();
         console.log("hey i am in");
@@ -96,29 +148,29 @@ window.addEventListener("load", function() {
                     buildings.forEach(function(building) {
                         mycanvas.drawImage(building.obj, building.x, building.y, building.Sx, building.Sy);
                     });
-                    buildings.forEach(function(building) {
-                        if (building.id == "building1") {
+                    blocks.forEach(function(building) {
+                        if (building.id == "block1") {
                             if (((mouseX > building.x - 100) && (mouseX < (building.x + building.Sx + 100))) && ((mouseY > building.y) && (mouseY < building.Sy + 100))) {
                                 // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
                                 mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
                             }
                             return;
                         }
-                        if (building.id == "building2") {
+                        if (building.id == "block2") {
                             if (((mouseX > (building.x - 150)) && (mouseX < (building.x + building.Sx + 150))) && ((mouseY > building.y) && (mouseY < building.Sy + 300))) {
                                 // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
                                 mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
                             }
                             return;
                         }
-                        if (building.id == "building5") {
+                        if (building.id == "block5") {
                             if (((mouseX > (building.x - 180)) && (mouseX < (building.x + building.Sx + 350))) && ((mouseY > (building.y - 10)) && (mouseY < building.Sy + 350))) {
                                 // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
                                 mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
                             }
                             return;
                         }
-                        if (building.id == "building3") {
+                        if (building.id == "block3") {
                             if (((mouseX > (building.x - 350)) && (mouseX < (building.x + building.Sx + 200))) && ((mouseY > (building.y - 20)) && (mouseY < building.Sy + 400))) {
                                 // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
                                 mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
@@ -148,27 +200,24 @@ window.addEventListener("load", function() {
                 }
                 if (building.id == "building2") {
                     if (((mouseXX > (building.x - 150)) && (mouseXX < (building.x + building.Sx + 150))) && ((mouseYY > building.y) && (mouseYY < building.Sy + 300))) {
-                        events("MECHANICAL")
+                        events("Mechanical");
                     }
                     return;
                 }
                 if (building.id == "building5") {
                     if (((mouseXX > (building.x - 180)) && (mouseXX < (building.x + building.Sx + 350))) && ((mouseYY > (building.y - 10)) && (mouseYY < building.Sy + 350))) {
-                        // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                        mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
+                        events("Electrical");
                     }
                     return;
                 }
                 if (building.id == "building3") {
                     if (((mouseXX > (building.x - 350)) && (mouseXX < (building.x + building.Sx + 200))) && ((mouseYY > (building.y - 20)) && (mouseYY < building.Sy + 400))) {
-                        // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                        mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
+                        events("Civil");
                     }
                     return;
                 }
                 if (((mouseXX > building.x - 100) && (mouseXX < (building.x + building.Sx + 100))) && ((mouseYY > building.y) && (mouseYY < building.Sy + 200))) {
-                    // mycanvas.drawImage(building.obj, building.x, building.y, building.Sx + 100, building.Sy + 100);
-                    mycanvas.drawImage(building.obj, mouseX - 50, mouseY - 50, building.Sx + 100, building.Sy + 100);
+                    events("Electronics and Communication");
                 }
             });
         });

@@ -2,9 +2,6 @@
 
 class events extends controller{
 
-
-    private $error = "";
-
     public function ComputerScience(){
         $data = $this->getData("COMPUTER");
         if($data){
@@ -16,7 +13,7 @@ class events extends controller{
         }
     }
 
-    public function MECHANICAL(){
+    public function Mechanical(){
         $data = $this->getData("MECHANICAL");
         if($data){
             $html = $this->generateHTML($data);
@@ -27,7 +24,41 @@ class events extends controller{
         }
     }
 
+    public function Civil(){
+        $data = $this->getData("CIVIL");
+        if($data){
+            $html = $this->generateHTML($data);
+            $this->deliverJSONResponse(200, "recordFound", $html);
+        }
+        else{
+            $this->deliverJSONResponse(500, "Database Connection Error", $this->error);
+        }
+    }
+
+    public function Electrical(){
+        $data = $this->getData("ELECTRICAL");
+        if($data){
+            $html = $this->generateHTML($data);
+            $this->deliverJSONResponse(200, "recordFound", $html);
+        }
+        else{
+            $this->deliverJSONResponse(500, "Database Connection Error", $this->error);
+        }
+    }
+
+    public function ElectronicsandCommunication(){
+        $data = $this->getData("ELECTRONICS");
+        if($data){
+            $html = $this->generateHTML($data);
+            $this->deliverJSONResponse(200, "recordFound", $html);
+        }
+        else{
+            $this->deliverJSONResponse(500, "Database Connection Error", $this->error);
+        }
+    }
+
     private function getData($dept){
+        header('Access-Control-Allow-Origin: *'); 
         $handler = $this->database();
         if($handler){
             $result = $handler->prepare("select * from events where department=:dept");
@@ -52,7 +83,13 @@ class events extends controller{
             $details = $obj['details'];
             $contact = $obj['eventHead'];
             $contact = str_replace(",", "<br>", $contact);
-            $eventHandler = '';
+            $eventHandler = $obj['link'];
+            if($eventHandler){
+                $btn = '<a href="'.$eventHandler.'"><button>REGISTER</button></a>';
+            }
+            else{
+                $btn = '';
+            }
             if($i%3==0){
                 $html .= $rowBeg;
             }
@@ -65,7 +102,7 @@ class events extends controller{
                                 <span class="contact">CONTACT</span><br/>'.$contact.'
 
                             </p>
-                            <a href="'.$eventHandler.'"><button>REGISTER</button></a>
+                            '.$btn.'
                         </span>
                     </div>';
             if($i%3==2){

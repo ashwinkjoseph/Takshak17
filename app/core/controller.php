@@ -2,6 +2,7 @@
 
 class controller{
 
+    protected $error = "";
     protected function filteroutput($string){
     }
     
@@ -22,10 +23,10 @@ class controller{
 
     }
 
-    protected function database(){
+    protected function database(){ 
         $handler = false;
         try{
-            $handler = new PDO("mysql:host=127.0.0.1;dbname=takshak;charset=utf8", "root", "");
+            $handler = new PDO("mysql:host=localhost;dbname=".getenv("DBNAME").";charset=utf8", getenv("DBUSER"), getenv("DBPASS"));
             $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch(PDOException $e){

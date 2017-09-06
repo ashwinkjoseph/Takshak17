@@ -41,15 +41,9 @@ function events(name) {
         $(".event_popup").find("span").css({ "opacity": 0, "margin-top": -20 }).animate({ "opacity": 1, "margin-top": 0 }, 800);
         $("#depart").html(name + " Department");
         name = name.replace(/ /g, '');
-        var url = "http://localhost/Takshak17/public/events/" + name;
+        var url = "http://takshak.in/2017/public/events/" + name;
         $.get(url, function(data, status) {
-            // data.data.forEach(function(event) {
-            //     console.log(event);
-            // });
-            // console.log(data);
-            // console.log(data);
             var html = $.parseHTML(data.data);
-            // console.log(html);
             $("#content").append(html);
         }, "json");
         return false;

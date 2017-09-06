@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takshak `17 | MACE</title>
 
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="http://takshak.in/2017/public/assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://takshak.in/2017/public/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://takshak.in/2017/public/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://takshak.in/2017/public/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://takshak.in/2017/public/assets/ico/apple-touch-icon-57-precomposed.png">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/main.css">
-    <!-- <link rel="stylesheet" type="text/css" href="http://localhost/Takshak17/public/assets/css/main.css"> -->
-    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017dev/public/assets/css/responsive.css">
-    <script src="http://takshak.in/2017dev/public/assets/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017/public/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://takshak.in/2017/public/assets/css/responsive.css">
+    <script src="http://takshak.in/2017/public/assets/js/script.js"></script>
+    <script>
+        // var timeout = setTimeout(function(){
+        //     $('.mobview').prepend("Optimised for slow connections");
+        //     $('.deskview').css("display", "none");
+        //     $('.mobview').css("display", "block");
+        // }, 30000);    
+    </script>
 </head>
 
 <body>
@@ -22,7 +34,7 @@
         <div class="container">
             <br><br><br><br><br>
             <center>
-                <img src="http://takshak.in/2017dev/public/assets/img/new/logo.png" class="mainlogo"><br>
+                <img src="http://takshak.in/2017/public/assets/img/new/logo.png" class="mainlogo"><br>
                 <span class="subtitle">BEGIN WITHIN</span><br/> 2017 SEPTEMBER 22,23<br>
             </center>
         </div>
@@ -49,52 +61,53 @@
                         year. This time it's out to rekindle the fire within and awaken the sleeping spirit of innovation.
                     </p>
                 </div>
-                <div class="col-sm-6"><br><br><br><img src="http://takshak.in/2017dev/public/assets/img/new/mace-watercolor.png" style="width: 100%"></div>
+                <div class="col-sm-6"><br><br><br><img src="http://takshak.in/2017/public/assets/img/new/mace-watercolor.png" style="width: 100%"></div>
             </div>
         </div>
     </section>
     <section class="screenfit events">
-        <div class="deskview"  style="background: url(http://takshak.in/2017dev/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
+        <div class="deskview"  style="background: url(http://takshak.in/2017/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
             <div class="container">
                 <br>
                 <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
-                <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
+                <img src="http://takshak.in/2017/public/assets/img/new/terrain2.png" id="terrain">
+                <!-- <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas> -->
             </div>
         </div>
-        <div class="mobview"  style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);">
+        <div class="mobview"  style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);">
             <div class="container">
                 <h1>EVENTS</h1>
                 <p>[ Select a department to view Events under it ]</p><br/>
-                <span class="depart_mob">
-                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                <span class="depart_mob" onclick="events('Computer Science')">
+                    <span class="dep_img"><img src="http://takshak.in/2017/public/assets/img/new/building1.png"></span>
                    <span class="dep_title">
                        <span class="ttle">Computer Department</span>
                        <span class="evts">Total 14 Events</span>
                     </span>
                 </span>
-                <span class="depart_mob">
-                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                <span class="depart_mob" onclick="events('Civil')">
+                    <span class="dep_img"><img src="http://takshak.in/2017/public/assets/img/new/building2.png"></span>
                    <span class="dep_title">
                        <span class="ttle">Civil Department</span>
                        <span class="evts">Total 10 Events</span>
                     </span>
                 </span>
-                <span class="depart_mob">
-                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                <span class="depart_mob" onclick="events('Mechanical')">
+                    <span class="dep_img"><img src="http://takshak.in/2017/public/assets/img/new/building3.png"></span>
                    <span class="dep_title">
                        <span class="ttle">Mechanical Department</span>
                        <span class="evts">Total 18 Events</span>
                     </span>
                 </span>
-                <span class="depart_mob">
-                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                <span class="depart_mob" onclick="events('Electrical')">
+                    <span class="dep_img"><img src="http://takshak.in/2017/public/assets/img/new/building4.png"></span>
                    <span class="dep_title">
                        <span class="ttle">EEE Department</span>
                        <span class="evts">Total 18 Events</span>
                     </span>
                 </span>
-                <span class="depart_mob">
-                    <span class="dep_img"><img src="http://takshak.in/2017dev/public/assets/img/new/building1.png"></span>
+                <span class="depart_mob" onclick="events('ElectronicsandCommunication')">
+                    <span class="dep_img"><img src="http://takshak.in/2017/public/assets/img/new/building5.png"></span>
                    <span class="dep_title">
                        <span class="ttle">EC Department</span>
                        <span class="evts">Total 18 Events</span>
@@ -104,7 +117,7 @@
         </div>
 
     </section>
-    <section class="sponsors screenfit" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
+    <section class="sponsors screenfit" style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
         <div class="container" style="line-height: 24px;">
             <h1 style="padding:60px 0 20px;font-size: 42px;font-weight: bold;color: #4b3829;text-shadow: 0 2px 2px rgba(0,0,0,0.1); ">Sponsors</h1>
             <div class="row">
@@ -189,7 +202,7 @@
             </div>
         </div>
     </section>
-    <section class="screenfit contacts" style="background: url(http://takshak.in/2017dev/public/assets/img/new/texture-paper-1.jpg);">
+    <section class="screenfit contacts" style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);">
         <div class="container">
             <center>
                 <h3 style="font-size: 24px; font-weight: bold; margin: 70px 0 0 ; padding: 8px 8px; color:#4b3829;border:3px solid #4b3829; border-width: 3px 0; letter-spacing: 5px;display: inline-block;">FOLLOW US</h3><br>
@@ -213,8 +226,8 @@
                             <table id="contacts_table" width="100%">
                                 <tr>
                                     <th>PRINCIPAL</th>
-                                    <td>Prof. Geetha B</td>
-                                    <td>+91485 2822363</td>
+                                    <td>Prof. Soosan George/td>
+                                    <td>+91 9446072363</td>
                                 </tr>
                                 <tr>
                                     <th>COORDINATOR</th>
@@ -296,19 +309,19 @@
             </center>
         </div>
     </section>
-    <div class="intro-map-bg screenfit"><img src="http://takshak.in/2017dev/public/assets/img/new/mapbg1.jpg" id="bgimage" style="height: 100%;transform:scale(2.4,2.4);transition: all 1500ms ease-out;"></div>
+    <div class="intro-map-bg screenfit"><img src="http://takshak.in/2017/public/assets/img/new/mapbg1.jpg" id="bgimage" style="height: 100%;transform:scale(2.4,2.4);transition: all 1500ms ease-out;"></div>
 
     <nav class="navig active">
         <ul>
             <li><a href="#" onclick="openpage('about');return false;">ABOUT</a></li>
             <li><a href="#" onclick="openpage('events');return false;">EVENTS</a></li>
-            <li><a href="#" onclick="openpage('sponsors');return false;">SPORNSORS</a></li>
-            <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li>
+            <li><a href="#" onclick="openpage('sponsors');return false;">SPONSORS</a></li>
+            <!-- <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li> -->
             <li><a href="#" onclick="openpage('contacts');return false;">FOLLOW US</a></li>
         </ul>
     </nav>
 
-    <div class="event_popup" style="background-image: url(http://takshak.in/2017dev/public/assets/img/new/event_civil.jpg)">
+    <div class="event_popup" style="background-image: url(http://takshak.in/2017/public/assets/img/new/event_civil.jpg)">
         <div class="content" id="content">
             <h3 class="evntby">EVENTS BY</h3>
             <h1 class="depart" id="depart"></h1>
@@ -317,7 +330,7 @@
     </div>
     <div class="backtohome" style="display: none;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up backup"></span><span class="glyphicon glyphicon-remove backclose"></span></a></div>
     <div class="mobilenav"><a href="#" onclick="opennav();return false;"><span class="glyphicon glyphicon-align-justify"></span></a></div>
-    <script src="http://takshak.in/2017dev/public/assets/js/canvasAnimator.js"></script>
+    <!-- <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script> -->
     <script type="text/javascript">
         divtitle = document.getElementById("home");
         bg = document.getElementById("bgimage");
@@ -326,6 +339,47 @@
             var mouseY = event.pageY;
             var scale = (mouseX / document.documentElement.clientWidth - 0.5) * 2;
             bg.style.transform = "translate(" + (-mouseX + document.documentElement.clientWidth / 2) + "px," + (-mouseY + document.documentElement.clientHeight / 2 - 130) + "px) scale(2.3,2.3) rotateZ(" + (10 * scale) + "deg)";
+        });
+        eventdiv = document.querySelector(".events");
+        terrain = document.getElementById("terrain");
+        var flag = true;
+        eventdiv.addEventListener("mousemove", function(event) {
+            var mouseXX = event.pageX;
+            var mouseYY = event.pageY;
+            var scale = (mouseXX / document.documentElement.clientWidth - 0.5) * 2;
+            if(scale<0){
+                scale = -scale;
+            }
+            scale = 1 - scale;
+            scale = scale *1.5;
+            var Xposition = "";
+            var Yposition = "";
+            Yposition = (-mouseYY + document.documentElement.clientHeight / 2 - 130);
+            if(mouseXX>1300){
+                Xposition = (document.documentElement.clientWidth / 2) - (mouseXX);
+                Xposition = (Xposition+496)*3;
+            }
+            else{
+                Xposition = (document.documentElement.clientWidth / 2) + (mouseXX*2);
+                Xposition = (Xposition-1075);
+            }
+            document.getElementById("eventLoader").innerHTML = "mouseX: "+mouseXX+" | mouseY: "+mouseYY+" | xposition:"+Xposition+" | yposition:"+Yposition+" | "+(-mouseYY + document.documentElement.clientHeight / 2 - 130);
+            if(mouseXX>400&&mouseXX<1350){
+                terrain.style.transform = "";
+                flag = false;
+            }
+            else{
+                // if(!flag){
+                //     if(mouseXX>1300){
+                //         Xposition = document.documentElement.clientWidth;
+                //     }
+                //     else{
+                //         Xposition = 400;
+                //     }
+                //     flag = true;
+                // }
+                terrain.style.transform = "translate(" + Xposition + "px," + Yposition + "px) scale("+scale+","+scale+") rotateZ(" + (10 * scale) + "deg)";
+            }
         });
     </script>
 </body>

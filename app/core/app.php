@@ -1,12 +1,16 @@
 <?php
 
-class App{
+class App{   
 
     protected $controller = "home";
     protected $method = "index";
     protected $params = array();
 
     public function __construct(){
+
+        require __DIR__.'/../../vendor/autoload.php';
+        $dotenv = new Dotenv\Dotenv(__DIR__);
+        $dotenv->load();
 
         $url = $this->parseUrl();
 

@@ -1,0 +1,13 @@
+{
+    "name": "josephashwin/takshak17website",
+    "description": "Website for Takshak 2017",
+    "type": "project",
+    "authors": [{
+        "name": "Joseph Ashwin",
+        "email": "ashwinkjoseph@gmail.com"
+    }],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
