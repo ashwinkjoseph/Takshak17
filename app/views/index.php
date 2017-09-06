@@ -21,11 +21,11 @@
     <link rel="stylesheet" type="text/css" href="http://takshak.in/2017/public/assets/css/responsive.css">
     <script src="http://takshak.in/2017/public/assets/js/script.js"></script>
     <script>
-        // var timeout = setTimeout(function(){
-        //     $('.mobview').prepend("Optimised for slow connections");
-        //     $('.deskview').css("display", "none");
-        //     $('.mobview').css("display", "block");
-        // }, 30000);    
+        var timeout = setTimeout(function(){
+            $('.mobview').prepend("Optimised for slow connections");
+            $('.deskview').css("display", "none");
+            $('.mobview').css("display", "block");
+        }, 30000);    
     </script>
 </head>
 
@@ -70,8 +70,7 @@
             <div class="container">
                 <br>
                 <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
-                <img src="http://takshak.in/2017/public/assets/img/new/terrain2.png" id="terrain">
-                <!-- <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas> -->
+                <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
             </div>
         </div>
         <div class="mobview"  style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);">
@@ -330,7 +329,7 @@
     </div>
     <div class="backtohome" style="display: none;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up backup"></span><span class="glyphicon glyphicon-remove backclose"></span></a></div>
     <div class="mobilenav"><a href="#" onclick="opennav();return false;"><span class="glyphicon glyphicon-align-justify"></span></a></div>
-    <!-- <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script> -->
+    <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script>
     <script type="text/javascript">
         divtitle = document.getElementById("home");
         bg = document.getElementById("bgimage");
@@ -339,47 +338,6 @@
             var mouseY = event.pageY;
             var scale = (mouseX / document.documentElement.clientWidth - 0.5) * 2;
             bg.style.transform = "translate(" + (-mouseX + document.documentElement.clientWidth / 2) + "px," + (-mouseY + document.documentElement.clientHeight / 2 - 130) + "px) scale(2.3,2.3) rotateZ(" + (10 * scale) + "deg)";
-        });
-        eventdiv = document.querySelector(".events");
-        terrain = document.getElementById("terrain");
-        var flag = true;
-        eventdiv.addEventListener("mousemove", function(event) {
-            var mouseXX = event.pageX;
-            var mouseYY = event.pageY;
-            var scale = (mouseXX / document.documentElement.clientWidth - 0.5) * 2;
-            if(scale<0){
-                scale = -scale;
-            }
-            scale = 1 - scale;
-            scale = scale *1.5;
-            var Xposition = "";
-            var Yposition = "";
-            Yposition = (-mouseYY + document.documentElement.clientHeight / 2 - 130);
-            if(mouseXX>1300){
-                Xposition = (document.documentElement.clientWidth / 2) - (mouseXX);
-                Xposition = (Xposition+496)*3;
-            }
-            else{
-                Xposition = (document.documentElement.clientWidth / 2) + (mouseXX*2);
-                Xposition = (Xposition-1075);
-            }
-            document.getElementById("eventLoader").innerHTML = "mouseX: "+mouseXX+" | mouseY: "+mouseYY+" | xposition:"+Xposition+" | yposition:"+Yposition+" | "+(-mouseYY + document.documentElement.clientHeight / 2 - 130);
-            if(mouseXX>400&&mouseXX<1350){
-                terrain.style.transform = "";
-                flag = false;
-            }
-            else{
-                // if(!flag){
-                //     if(mouseXX>1300){
-                //         Xposition = document.documentElement.clientWidth;
-                //     }
-                //     else{
-                //         Xposition = 400;
-                //     }
-                //     flag = true;
-                // }
-                terrain.style.transform = "translate(" + Xposition + "px," + Yposition + "px) scale("+scale+","+scale+") rotateZ(" + (10 * scale) + "deg)";
-            }
         });
     </script>
 </body>
