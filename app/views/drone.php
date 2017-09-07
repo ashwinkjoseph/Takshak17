@@ -41,7 +41,7 @@ $cost = "";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cross Over 2017 | Registeration</title>
+    <title>Drone Prix 2017 | Registeration</title>
 
     <!-- CSS -->
 
@@ -125,7 +125,7 @@ $cost = "";
         }
     </style>
     <script>
-        var PAGE = "bridgedesign.jpg";
+        var PAGE = "droneBackground.jpg";
         ;(function(){
             function id(v){ return document.getElementById(v); }
             function loadbar() {

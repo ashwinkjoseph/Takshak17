@@ -218,29 +218,100 @@ $cost = "";
 
                 <form role="form" action="http://takshak.in/2017/public/crossover/submit" method="post" class="registration-form" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="sr-only" for="form-name">Name*</label>
-                        <input type="text" name="form-name" placeholder="Name*" class="form-project-name form-control" id="form-name" value="<?=$nameofproject?>">
+                        <label class="sr-only" for="form-college">College / School *</label>
+                        <input type="text" name="form-college" placeholder="College / School *" class="form-college form-control" id="form-college" value="<?=$college?>">
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="form-email">E-Mail*</label>
-                        <input type="email" name="form-email" placeholder="E-Mail*" class="form-project-email form-control" id="form-email">
+                    <hr/>
+
+                    <div class="form-member">
+                        <h5>Member 1</h5>
+                        <input type="hidden" name="member1" value="1"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-1-name">Name</label>
+                            <input type="text" name="form-member-1-name" placeholder="Name" class="form-member-name form-control" id="form-member-1-name" value="<?=$member1name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-1-email">E-Mail</label>
+                            <input type="email" name="form-member-1-email" placeholder="E-Mail" class="form-member-name form-control" id="form-member-1-email" value="<?=$member1name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-1-contact">Contact</label>
+                            <input type="number" name="form-member-1-contact" placeholder="Contact Number" class="form-member-number form-control" id="form-member-1-contact" value="<?=$member1name?>">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="form-contact">Contact Number*</label>
-                        <input type="number" name="form-contact" placeholder="Contact Number*" class="form-project-number form-control" id="form-contact-number">
+
+                    <div class="form-member hidden-form-member">
+                        <h5>Member 2</h5>
+                        <input type="hidden" name="member2" value="0"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-2-name">Name</label>
+                            <input type="text" name="form-member-2-name" placeholder="Name" class="form-member-name form-control form-optional" id="form-member-2-name" value="<?=$member2name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-2-email">E-mail</label>
+                            <input type="email" name="form-member-2-email" placeholder="E-Mail" class="form-member-name form-control form-optional" id="form-member-2-email" value="<?=$member2name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-2-email">Contact</label>
+                            <input type="number" name="form-member-2-contact" placeholder="Contact Number" class="form-member-number form-control form-optional" id="form-member-2-contact" value="<?=$member2name?>">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="form-place">Place*</label>
-                        <input type="text" name="form-place" placeholder="Place*" class="form-project-name form-control" id="form-place">
+
+                    <div class="form-member hidden-form-member">
+                        <h5>Member 3</h5>
+                        <input type="hidden" name="member3" value="0"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-3-name">Name</label>
+                            <input type="text" name="form-member-3-name" placeholder="Name" class="form-member-name form-control form-optional" id="form-member-3-name" value="<?=$member3name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-3-email">E-mail</label>
+                            <input type="email" name="form-member-3-email" placeholder="E-Mail" class="form-member-name form-control form-optional" id="form-member-3-email" value="<?=$member2name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-3-email">Contact</label>
+                            <input type="number" name="form-member-3-contact" placeholder="Contact Number" class="form-member-number form-control form-optional" id="form-member-3-contact" value="<?=$member2name?>">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="form-college-name">College*</label>
-                        <input type="text" name="form-college-name" placeholder="College*" class="form-college-name form-control" id="form-college-name">
+
+                    <div class="form-member hidden-form-member">
+                        <h5>Member 4</h5>
+                        <input type="hidden" name="member4" value="0"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-4-name">Name</label>
+                            <input type="text" name="form-member-4-name" placeholder="Name" class="form-member-name form-control form-optional" id="form-member-4-name" value="<?=$member4name?>" >
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-4-email">E-mail</label>
+                            <input type="eamail" name="form-member-4-email" placeholder="E-Mail" class="form-member-name form-control form-optional" id="form-member-4-email" value="<?=$member2name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-4-email">Contact</label>
+                            <input type="number" name="form-member-4-contact" placeholder="Contact Number" class="form-member-number form-control form-optional" id="form-member-4-contact" value="<?=$member2name?>">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="form-class">Department*</label>
-                        <input type="text" name="form-class" placeholder="Department*" class="form-class form-control" id="form-class">
+
+                    <div class="form-member hidden-form-member">
+                        <h5>Member 5</h5>
+                        <input type="hidden" name="member5" value="0"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-5-name">Name</label>
+                            <input type="text" name="form-member-5-name" placeholder="Name" class="form-member-name form-control form-optional" id="form-member-5-name" value="<?=$member5name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-5-email">E-mail</label>
+                            <input type="email" name="form-member-5-email" placeholder="E-Mail" class="form-member-name form-control form-optional" id="form-member-5-email" value="<?=$member2name?>">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-member-5-email">Contact</label>
+                            <input type="number" name="form-member-5-contact" placeholder="Contact Number" class="form-member-number form-control form-optional" id="form-member-5-contact" value="<?=$member2name?>">
+                        </div>
                     </div>
+                    
+                    <div class="form-member">
+                        <button class="btn green" id="newmember" onclick="addmember()" type="button">Add Another Member</button>
+                    </div>
+
                     <hr/>
                     <button type="submit" class="btn">Send The Form &amp; Register</button>
                 </form>

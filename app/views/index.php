@@ -329,7 +329,8 @@
     </div>
     <div class="backtohome" style="display: none;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up backup"></span><span class="glyphicon glyphicon-remove backclose"></span></a></div>
     <div class="mobilenav"><a href="#" onclick="opennav();return false;"><span class="glyphicon glyphicon-align-justify"></span></a></div>
-    <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script>
+    <!-- <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script> -->
+    <script src="http://localhost/Takshak17/public/assets/js/canvasAnimator.js"></script>
     <script type="text/javascript">
         divtitle = document.getElementById("home");
         bg = document.getElementById("bgimage");

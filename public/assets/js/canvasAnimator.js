@@ -138,12 +138,28 @@ window.addEventListener("load", function() {
             }
             if (mouseX < ((canvas.width / 2) - 250)) {
                 var x = ((canvas.width / 2)) + 466 - (mouseX * 2);
-                mycanvas.drawImage(myImg, x, y, (mouseX * 1.5), (mouseX));
+                if (mouseX > 135) {
+                    width = (mouseX * 1.5);
+                    height = mouseX;
+                } else {
+                    height = 135;
+                    width = (height * 1.5);
+                }
+                mycanvas.drawImage(myImg, x, y, width, height);
             } else {
                 if (mouseX > ((canvas.width / 2) + 260)) {
                     var x = ((canvas.width / 2)) - (mouseX / 3);
-                    mycanvas.drawImage(myImg, x, y, ((canvas.width - mouseX) * 1.5), (canvas.width - mouseX));
+                    if ((canvas.width - mouseX) > 135) {
+                        width = ((canvas.width - mouseX) * 1.5);
+                        height = (canvas.width - mouseX);
+                    } else {
+                        height = 135;
+                        width = (height * 1.5);
+                    }
+                    mycanvas.drawImage(myImg, x, y, width, height);
                 } else {
+                    var height = (canvas.width / 3);
+                    var width = (canvas.width / 2);
                     mycanvas.drawImage(myImg, rectX, rectY, width, height);
                     buildings.forEach(function(building) {
                         mycanvas.drawImage(building.obj, building.x, building.y, building.Sx, building.Sy);
