@@ -1,3 +1,27 @@
+function getImage(DepartmentName) {
+    var html = getHTMLDOM(DepartmentName);
+    var DOMURL = window.URL || window.webkitURL || window;
+
+    var img = new Image();
+    var svg = new Blob([html], { type: 'image/svg+xml' });
+    var url = DOMURL.createObjectURL(svg);
+    img.src = url;
+    return img;
+}
+
+function getHTMLDOM(DepartmentName) {
+    var data = '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">' +
+        '<foreignObject width="100%" height="100%">' +
+        '<div xmlns="http://www.w3.org/1999/xhtml" class="col-sm-4">' +
+        '<span style = "display: inline-block;width: 100%;min-width: 280px;border-radius: 5px;border: 3px solid #8b4900;min-height: 100px;background: rgba(255, 255, 255, 0.5);margin: 10px 0;overflow: auto;padding-bottom: 20px;">' +
+        '<h4>' + DepartmentName + '</h4><br/>' +
+        '</span>' +
+        '</div>' +
+        '</foreignObject>' +
+        '</svg>';
+    return data;
+}
+
 window.addEventListener("load", function() {
     clearTimeout(timeout);
     var mouseX = "sh";
@@ -78,40 +102,35 @@ window.addEventListener("load", function() {
     }];
     var blocks = [{
         id: "block1",
-        src: "http://takshak.in/2017/public/assets/img/new/block1.png",
-        obj: block1,
+        obj: getImage("Computer Science and Engineering"),
         x: rectX + 130,
         y: rectY,
         Sx: 100,
         Sy: 100
     }, {
         id: "block2",
-        src: "http://takshak.in/2017/public/assets/img/new/block2.png",
-        obj: block2,
+        obj: getImage("Mechanical Engineering"),
         x: rectX + 60,
         y: rectY + 170,
         Sx: 100,
         Sy: 80
     }, {
         id: "block3",
-        src: "http://takshak.in/2017/public/assets/img/new/blovk3.png",
-        obj: block3,
+        obj: getImage("Civil Engineering"),
         x: rectX + 140,
         y: rectY + 310,
         Sx: 70,
         Sy: 70
     }, {
         id: "block4",
-        src: "http://takshak.in/2017/public/assets/img/new/block4.png",
-        obj: block4,
+        obj: getImage("Electronics and Communications"),
         x: rectX + 400,
         y: rectY + 90,
         Sx: 120,
         Sy: 100
     }, {
         id: "block5",
-        src: "http://takshak.in/2017/public/assets/img/new/block5.png",
-        obj: block5,
+        obj: getImage("Electrical Electronics Engineering"),
         x: rectX + 500,
         y: rectY + 210,
         Sx: 100,

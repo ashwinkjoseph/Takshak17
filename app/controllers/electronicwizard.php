@@ -2,14 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Ashwin Joseph
- * Date: 28-08-2017
- * Time: 23:55
+ * Date: 24-08-2017
+ * Time: 00:25
  */
 
-class droneprix extends controller
+class electronicwizard extends controller
 {
     public function index(){
-        $this->view("drone");
+        $this->view("electronicwizard");
     }
 
     public function submit($get, $post){
@@ -33,15 +33,18 @@ class droneprix extends controller
 
         // email fields: to, from, subject, and so on
         $to = "soorajpradeep97@gmail.com, ashwinkjoseph@gmail.com";
-        $from = "droneprix@takshak.in";
-        $subject ="New Registration for Drone Prix";
+        $from = "electronicwizard@takshak.in";
+        $subject ="New Registration for Electronic Wizard";
         $message = "Uploaded File\n";
-        $message .= "Name :". $formData['form-name']."\n";
-        $message .= "E-Mail :". $formData['form-email']."\n";
-        $message .= "Contact Number :". $formData['form-contact']."\n";
-        $message .= "Place :". $formData['form-place']."\n";
-        $message .= "College Name :". $formData['form-college-name']."\n";
-        $message .= "Department :". $formData['form-class']."\n";
+        $i = 0;
+        for($i = 1; $i<3; $i++){
+            if(isset($formData['form-member-1-name'])){
+                $message .= "Student".$i." \n";
+                $message .= "Name :". $formData['form-member-'.$i.'-name']."\n";
+                $message .= "Contact Number :". $formData['form-member-'.$i.'-contact']."\n";
+                $message .= "E-Mail :".$formData['form-member-'.$i.'-email']."\n";
+            }
+        }
         $headers = "From: $from";
 
         // boundary
@@ -66,4 +69,5 @@ class droneprix extends controller
         return $emailData;
 
     }
+
 }

@@ -57,6 +57,17 @@ class events extends controller{
         }
     }
 
+    public function MCA(){
+        $data = $this->getData("MCA");
+        if($data){
+            $html = $this->generateHTML($data);
+            $this->deliverJSONResponse(200, "recordFound", $html);
+        }
+        else{
+            $this->deliverJSONResponse(500, "Database Connection Error", $this->error);
+        }
+    }
+
     private function getData($dept){
         header('Access-Control-Allow-Origin: *'); 
         $handler = $this->database();

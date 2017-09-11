@@ -253,22 +253,22 @@ $cost = "";
                         <input type="hidden" name="member1" value="1"/>
                         <div class="form-group">
                             <label class="sr-only" for="form-member-1-name">Name</label>
-                            <input type="text" name="form-member-1-name" placeholder="Name" class="form-member-name form-control" id="form-member-1-name" value="<?=$member1name?>">
+                            <input type="text" name="form-member-1-name" placeholder="Name" class="form-member-name form-control form-optional" id="form-member-1-name" value="<?=$member1name?>">
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="form-member-1-email">E-Mail</label>
-                            <input type="email" name="form-member-1-email" placeholder="E-Mail" class="form-member-name form-control" id="form-member-1-email" value="<?=$member1name?>">
+                            <input type="email" name="form-member-1-email" placeholder="E-Mail" class="form-member-name form-control form-optional" id="form-member-1-email" value="<?=$member1name?>">
                         </div>
                         <div class="col-sm-8" style="padding-left:0;">
                             <div class="form-group">
                                 <label class="sr-only" for="form-member-1-school">School</label>
-                                <input type="text" name="form-member-1-school" placeholder="Name Of College / School " class="form-member-school form-control" id="form-member-1-school" value="<?=$member1school?>">
+                                <input type="text" name="form-member-1-school" placeholder="Name Of College / School " class="form-member-school form-optional form-control" id="form-member-1-school" value="<?=$member1school?>">
                             </div>
                         </div>
                         <div class="col-sm-4"  style="padding-right:0;padding-left:0;">
                             <div class="form-group">
                                 <label class="sr-only" for="form-member-1-age">Age</label>
-                                <input type="text" name="form-member-1-age" placeholder="Age" class="form-member-age form-control" id="form-member-1-age" value="<?=$member1age?>">
+                                <input type="text" name="form-member-1-age" placeholder="Age" class="form-member-age form-control form-optional" id="form-member-1-age" value="<?=$member1age?>">
                             </div>
                         </div>
                     </div>

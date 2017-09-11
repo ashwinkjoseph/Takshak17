@@ -216,7 +216,7 @@ $cost = "";
 
             <div class="modal-body">
 
-                <form role="form" action="http://takshak.in/2017/public/droneprix/submit" method="post" class="registration-form" enctype="multipart/form-data">
+                <form role="form" action="http://takshak.in/2017/public/macedroneprix/submit" method="post" class="registration-form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="sr-only" for="form-name">Name*</label>
                         <input type="text" name="form-name" placeholder="Name*" class="form-project-name form-control" id="form-name" value="<?=$nameofproject?>">

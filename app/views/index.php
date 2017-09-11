@@ -21,11 +21,11 @@
     <link rel="stylesheet" type="text/css" href="http://takshak.in/2017/public/assets/css/responsive.css">
     <script src="http://takshak.in/2017/public/assets/js/script.js"></script>
     <script>
-        var timeout = setTimeout(function(){
-            $('.mobview').prepend("Optimised for slow connections");
-            $('.deskview').css("display", "none");
-            $('.mobview').css("display", "block");
-        }, 30000);    
+        // var timeout = setTimeout(function(){
+        //     $('.mobview').prepend("Optimised for slow connections");
+        //     $('.deskview').css("display", "none");
+        //     $('.mobview').css("display", "block");
+        // }, 30000);    
     </script>
 </head>
 
@@ -39,7 +39,7 @@
             </center>
         </div>
     </section>
-    <section class="screenfit about">
+    <section class="screenfit about" style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);padding-bottom:80px;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -65,15 +65,20 @@
             </div>
         </div>
     </section>
-    <section class="screenfit events">
-        <div class="deskview"  style="background: url(http://takshak.in/2017/public/assets/img/new/sea.jpg);background-size: 100% 100%; ">
+    <section class="screenfit events" style="padding-bottom: 0;">
+        <div class="deskview"  style="background: url(http://takshak.in/2017/public/assets/img/new/sea.jpg);background-size: 100% 100%;padding-bottom: 30px; ">
             <div class="container">
                 <br>
-                <h1 id="eventLoader" style="color: #EEEEEE">Loading....</h1>
-                <canvas style="margin-left: -120px; position:relative; z-index:1" height="680px" width="900px" id="myCanvas"></canvas>
+               <h1>&#8226;EVENTS&#8226;</h1>
+                <div class="map">
+                    <span class="terrain" style="background-image: url(http://takshak.in/2017/public/assets/img/new/terrainx.png">
+                    </span>
+                    <span class="mapinfo">Department Name</span>
+
+                </div>
             </div>
         </div>
-        <div class="mobview"  style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);">
+        <div class="mobview"  style="background: url(http://takshak.in/2017/public/assets/img/new/texture-paper-1.jpg);padding-bottom: 30px;">
             <div class="container">
                 <h1>EVENTS</h1>
                 <p>[ Select a department to view Events under it ]</p><br/>
@@ -128,12 +133,12 @@
                 <div class="col-sm-4">
                     <h5 style="font-size: 16px;font-weight: bold;color: #4b3829; ">CURRENT LIST OF PARTNERS</h5>
                     <ul>
-                        <li>BAJAJ Motors
-                            <li>TVS Motors
-                                <li>TATA Consultancy Services
-                                    <li>SELZAR Polymers
-                                        <li>Nandilath G Mart
-                                            <li>Geojith
+                        <li><img src="http://takshak.in/2017/public/assets/img/sponsorLogo/FBLogo.jpg"/>
+                            <li><img src="http://takshak.in/2017/public/assets/img/sponsorLogo/ClubFM.gif"/>
+                                <li>Zezte
+                                    <li>Kahandhari
+                                        <li><img src="http://takshak.in/2017/public/assets/img/sponsorLogo/metconTMT.png"/>
+                                            <!-- <li>Geojith
                                                 <li>KP Chacko Gold
                                                     <li>Bobby chemanoor jewellers
                                                         <li>Chachu tour&amp;travels
@@ -142,10 +147,10 @@
                                                                     <li>Landmark apartments
                                                                         <li>Uncle John ice cream
                                                                             <li>Cloud 9 Hotels
-                                                                                <li>Maria International
+                                                                                <li>Maria International -->
                     </ul>
                 </div>
-                <div class="col-sm-4">
+                <!-- <div class="col-sm-4">
                     <ul>
                         <li>Rajasthan marbles
                             <li>Merriboy Icecream
@@ -163,7 +168,7 @@
                                                                             <li>Snowhite Fashions
                                                                                 <li>List Incomplete...
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -176,7 +181,7 @@
             <div class="row">
                 <span class="hlite">
                     <div class="view view-second">
-                        <img src="http://localhost/Takshak17/public/images/autoshow.jpg" />
+                        <!-- <img src="http://localhost/Takshak17/public/images/autoshow.jpg" /> -->
                         <div class="mask"></div>
                         <div class="hltcontent">
                             <h2>Auto Show</h2>
@@ -189,7 +194,7 @@
             <div class="row">
                 <span class="hlite">
                     <div class="view view-second">
-                        <img src="http://localhost/Takshak17/public/images/bmx.jpg" />
+                        <!-- <img src="http://localhost/Takshak17/public/images/bmx.jpg" /> -->
                         <div class="mask"></div>
                         <div class="hltcontent">
                             <h2>BMX</h2>
@@ -211,32 +216,37 @@
                     <div class="col-sm-4">
                         <div class="contact_data">
                             <span class="map"><iframe style="width:100%;height: 160px;border:0" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=10.0542,76.6192&key=AIzaSyDbB6aoV0aq5-ic2BnpgZ7z74rkaDItJzU" allowfullscreen></iframe></span>
-                            <span class="ovds">Ready to start your technical journey with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</span>
-                            <span class="mobno"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;9994 - 223 - 442</span>
-                            <span class="mailo"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;info@takshak.in</span>
-                            <a href="#" class="facebook">Facebook</a>
-                            <a href="#" class="twitter">Twitter</a>
+                            <span class="ovds">Ready to start your technical journey with us? That's great! Send us an email and we will get back to you as soon as possible!</span>
+                            <!-- <span class="mobno"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;9994 - 223 - 442</span> -->
+                            <span class="mailo"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;takshak@mace.ac.in</span>
+                            <a href="http://facebook.com/takshakofficial" class="facebook">Facebook</a>
+                            <a href="http://twitter.com/officialtakshak" class="twitter">Twitter</a>
                         </div>
                         <br/><br/><br/>
-                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="#">Jospeh Aswin</a></span>
+                        <span style="font-size: 12px;font-style: italic;">Designed By <a href="http://www.facebook.com/shameel.kadannamanna">Shameel</a> &amp; <a href="https://www.linkedin.com/in/joseph-ashwin-kottapurath-84b33011a/">Jospeh Aswin</a></span>
                     </div>
                     <div class="col-sm-8">
                         <div class="table">
                             <table id="contacts_table" width="100%">
                                 <tr>
                                     <th>PRINCIPAL</th>
-                                    <td>Prof. Soosan George/td>
+                                    <td>Dr. Soosan George T </td>
                                     <td>+91 9446072363</td>
+                                </tr>
+                                <tr>
+                                    <th>STAFF COORDINATOR</th>
+                                    <td>Dr. Jinsa Kuruvilla</td>
+                                    <td>+91 9645836063</td>
+                                </tr>
+                                <tr>
+                                    <th>CONVENER</th>
+                                    <td>Mr. Bennett Benny</td>
+                                    <td>+91 8281240420</td>
                                 </tr>
                                 <tr>
                                     <th>COORDINATOR</th>
                                     <td>Mr. Mohammed Sahal TK</td>
                                     <td>+91 7736876187</td>
-                                </tr>
-                                <tr>
-                                    <th>CONVENOR</th>
-                                    <td>Mr. Bennet Benny</td>
-                                    <td>+91 8281240420</td>
                                 </tr>
                                 <tr>
                                     <th>EVENTS HEAD</th>
@@ -248,24 +258,34 @@
                                     <td>Mr. Felix Boban</td>
                                     <td>+91 8075178751</td>
                                 </tr>
+				<tr>
+                                    <th>EVENTS HEAD</th>
+                                    <td>Mr. Arun H</td>
+                                    <td>+91 9447920624</td>
+                                </tr>
                                 <tr>
                                     <th>EVENTS HEAD</th>
-                                    <td>Mr. Shilpa joseph</td>
+                                    <td>Ms. Shilpa Joseph</td>
                                     <td>+91 9497029418</td>
                                 </tr>
                                 <tr>
                                     <th>FINANCE HEAD</th>
-                                    <td>Mr. Malik Ibnu easa</td>
+                                    <td>Mr. Malik Ibnu Easa</td>
                                     <td>+91 8281854922</td>
                                 </tr>
                                 <tr>
                                     <th>FINANCE HEAD</th>
-                                    <td>Mr. Rhwitwik Ms</td>
+                                    <td>Mr. Nithanth Domy</td>
+                                    <td>+91 8289819528</td>
+                                </tr>
+                                <tr>
+                                    <th>FINANCE HEAD</th>
+                                    <td>Mr. Rhwitwik MS</td>
                                     <td>+91 9497650415</td>
                                 </tr>
                                 <tr>
                                     <th>SPONSORSHIP HEAD</th>
-                                    <td>Mr. Nevin joseph</td>
+                                    <td>Mr. Nevin Joseph</td>
                                     <td>+91 7558800983</td>
                                 </tr>
                                 <tr>
@@ -280,7 +300,7 @@
                                 </tr>
                                 <tr>
                                     <th>PUBLICITY HEAD</th>
-                                    <td>Ms. Jefin joseph</td>
+                                    <td>Mr. Jefin Joseph</td>
                                     <td>+91 8301087601</td>
                                 </tr>
                                 <!-- <tr>
@@ -294,13 +314,23 @@
                                     <td>+91 8547203643</td>
                                 </tr>
                                 <tr>
+                                    <th>DESIGN HEAD</th>
+                                    <td>Mr. Anand Unnikrishnan</td>
+                                    <td>+91 9496070138</td>
+                                </tr>
+                                <tr>
                                     <th>WEB DEV . TECHNICAL</th>
                                     <td>Mr. Joseph Ashwin Kottapurath</td>
                                     <td>+91 9745511318</td>
                                 </tr>
+				<tr>
+                                    <th>REG. HEAD, TECHNICAL</th>
+                                    <td>Mr. Sooraj P</td>
+                                    <td>+91 8281539224</td>
+                                </tr>
                             </table>
                             <br><br>
-                            <b><u>SUPPORTING CREW</u></b><br><br>John,Mishal Aboobacker,Sreenath,Akshay Ramachandran,<br> Amjad Bin Raji,Rishan S ali,Abey,<br> Deepak,Mathews Joseph,Adarsh Jith<br> Abay Balan, Romariyo Johnson,Anjaly Kumaran
+                            <b><u>SUPPORTING CREW</u></b><br><br>John,Mishal Aboobacker,Sreenath,Akshay Ramachandran,<br> Amjad Bin Raji,Rishan S ali,Abey,<br> Deepak,Mathews Joseph,Adarsh Jith<br> Abay Balan, Romariyo Johnson<br> Anjaly Kumaran, Jafeel V, Krishnanunni
                         </div>
                     </div>
                 </div>
@@ -317,20 +347,22 @@
             <li><a href="#" onclick="openpage('sponsors');return false;">SPONSORS</a></li>
             <!-- <li><a href="#" onclick="openpage('highlights');return false;">HIGHLIGHTS</a></li> -->
             <li><a href="#" onclick="openpage('contacts');return false;">FOLLOW US</a></li>
+            <li><a href="http://www.takshak.in/trailofbreadcrumbs/" target="_blank">Trail of Bread Crumbs Game</a></li>
         </ul>
     </nav>
 
-    <div class="event_popup" style="background-image: url(http://takshak.in/2017/public/assets/img/new/event_civil.jpg)">
-        <div class="content" id="content">
-            <h3 class="evntby">EVENTS BY</h3>
-            <h1 class="depart" id="depart"></h1>
+    <div class="event_popup">
+        <div class="bgofevent"  style="background-image: url(http://takshak.in/2017/public/assets/img/new/event_civil.jpg)">
+            <div class="content" id="content">
+                <h3 class="evntby">EVENTS BY</h3>
+                <h1 class="depart" id="depart"></h1>
+            </div>
         </div>
         <a href="#" onclick="events('close');return false;" class="eventclose"><span class="glyphicon glyphicon-chevron-left"></span></a>
     </div>
     <div class="backtohome" style="display: none;"><a href="#" onclick="openpage('home');return false;"><span class="glyphicon glyphicon-chevron-up backup"></span><span class="glyphicon glyphicon-remove backclose"></span></a></div>
     <div class="mobilenav"><a href="#" onclick="opennav();return false;"><span class="glyphicon glyphicon-align-justify"></span></a></div>
-    <!-- <script src="http://takshak.in/2017/public/assets/js/canvasAnimator.js"></script> -->
-    <script src="http://localhost/Takshak17/public/assets/js/canvasAnimator.js"></script>
+    <script src="http://takshak.in/2017/public/assets/js/eventmapReal.js"></script>
     <script type="text/javascript">
         divtitle = document.getElementById("home");
         bg = document.getElementById("bgimage");

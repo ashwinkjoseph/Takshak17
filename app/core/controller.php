@@ -11,6 +11,7 @@ class controller{
     }
 
     protected function deliverJSONResponse($status, $statusMessage, $data){
+        header('Access-Control-Allow-Origin: *'); 
         header("Content-Type:application/json");
         header("HTTP/1.1 $status $statusMessage");
 

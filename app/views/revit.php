@@ -41,7 +41,7 @@ $cost = "";
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MOSC 2017 | Registeration</title>
+        <title>Revit 2017 | Registeration</title>
 
         <!-- CSS -->
        
@@ -125,7 +125,7 @@ $cost = "";
     }
         </style>
         <script>
-            var PAGE = "backgroundMOSC.png";
+            var PAGE = "backgroundWorkshop.png";
             ;(function(){
           function id(v){ return document.getElementById(v); }
           function loadbar() {
@@ -180,7 +180,7 @@ $cost = "";
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                        	<a href="#"><img style="height:100px;" src="http://takshak.in/2017/public/images/MOSC.png"></a>
+                        	<a href="#"><img style="height:100px;" src="http://takshak.in/2017/public/images/ravit.png"></a>
                             <h1><strong>Revit 2017</strong> Registration</h1>
                             <div class="description">
                             	<!-- <p>
@@ -189,7 +189,7 @@ $cost = "";
                             </div>
                             <div class="top-big-link">
                                 <a class="btn launch-modal trigg1" href="#" data-modal-id="modal-register"><img src="http://takshak.in/2017/public/images/Register.png"/></a>
-                                <a class="btn launch-modal trigg2" data-modal-id="aboutRevit" href="#"><img src="http://takshak.in/2017/public/images/aboutMOSCtrig.png"/></a>
+                                <a class="btn launch-modal trigg2" data-modal-id="aboutRevit" href="#"><img src="http://takshak.in/2017/public/images/aboutravittrig.png"/></a>
                                 <a class="btn launch-modal trigg3" data-modal-id="aboutTakshak" href="#"><img src="http://takshak.in/2017/public/images/aboutTriggers1.png"/></a>
                                 <a class="btn launch-modal trigg4" data-modal-id="aboutMACE" href="#"><img src="http://takshak.in/2017/public/images/aboutTriggers2.png"/></a>
                             </div>
@@ -214,59 +214,38 @@ $cost = "";
         			
         			<div class="modal-body">
         				
-	                    <form role="form" action="http://takshak.in/2017/public/mosc/submit" method="post" class="registration-form" enctype="multipart/form-data">
+	                    <form role="form" action="http://takshak.in/2017/public/revit/submit" method="post" class="registration-form" enctype="multipart/form-data">
 	                    	<div class="form-group">
-	                    		<label class="sr-only" for="form-school-name">School*</label>
-	                        	<input type="text" name="form-school-name" placeholder="School*" class="form-project-name form-control" id="form-school-name" value="<?=$nameofproject?>">
-	                        </div>
+                                <label class="sr-only" for="form-name">Name*</label>
+                                <input type="text" name="form-name" placeholder="Name*" class="form-project-name form-control" id="form-name" value="<?=$nameofproject?>">
+                            </div>
                             <div class="form-group">
-	                    		<label class="sr-only" for="form-email">E-Mail*</label>
-	                        	<input type="email" name="form-email" placeholder="E-Mail*" class="form-project-email form-control" id="form-email">
+                                <label class="sr-only" for="form-email">E-Mail*</label>
+                                <input type="email" name="form-email" placeholder="E-Mail*" class="form-project-email form-control" id="form-email">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-contact">Contact Number*</label>
-                                <input type="number" name="form-contact" placeholder="Contact Number*" class="form-project-number form-control" id="form-mentor-number">
+                                <input type="number" name="form-contact" placeholder="Contact Number*" class="form-project-number form-control" id="form-contact-number">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="form-preferred-exam-zone">Preferred Exam Zone*</label>
-                                <select class="form-control" name="form-preferred-exam-zone" id="form-preferred-exam-zone">
-                                    <option value="default" selected="1">select*</option>
-                                    <option value="Ernakulam">Ernakulam</option>
-                                    <option value="Thrissur">Thrissur</option>
-                                    <option value="Muvattupuzha">Muvattupuzha</option>
-                                    <option value="Kottayam">Kottayam</option>
-                                </select>
+                                <label class="sr-only" for="form-college-name">College*</label>
+                                <input type="text" name="form-college-name" placeholder="College*" class="form-college-name form-control" id="form-college-name">
                             </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-college-semester">Semester</label>
+                                <input type="text" name="form-college-semester" placeholder="Semester*" class="form-college-semester form-optional form-control" id="form-college-semester">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="form-as-team-or-not">Do you need accomodation*</label>
+                                <span>Do you need an accomodation?..</span><br>
+                                <label><input type="radio" name="form-accomodation" value="yes">Yes</label><br>
+                                <label><input type="radio" name="form-accomodation" value="no">No</label>
+                            </div>
+        
                             <hr/>
-
-                            <div class="form-member">
-                                <h5>Member 1</h5>
-                                <input type="hidden" name="member1" value="1"/>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-member-1-name">Name</label>
-                                    <input type="text" name="form-member-1-name" placeholder="Name" class="form-member-name form-control" id="form-member-1-name" value="<?=$member1name?>">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-member-1-class">Class*</label>
-                                    <input type="text" name="form-member-1-class" placeholder="Class*" class="form-member-name form-control" id="form-member-1-class" value="<?=$member1name?>">
-                                </div>
-                            </div>
-
-                            <div class="form-member">
-                                <h5>Member 2</h5>
-                                <input type="hidden" name="member2" value="1"/>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-member-2-name">Name</label>
-                                    <input type="text" name="form-member-2-name" placeholder="Name" class="form-member-name form-control" id="form-member-2-name" value="<?=$member2name?>">
-                                </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="form-member-2-class">Class*</label>
-                                    <input type="text" name="form-member-2-class" placeholder="Class*" class="form-member-name form-control" id="form-member-2-class" value="<?=$member2name?>">
-                                </div>
-                            </div>
-
-                            <hr/>
-	                        <button type="submit" class="btn">Send The Form &amp; Register</button>
+                            <!-- <span style="color:red">Payment details will be given later, fee is 1000 Rupees</span> -->
+                            <button type="submit" class="btn">Send The Form &amp; Register</button>
 	                    </form>
 	                    
         			</div>
@@ -284,9 +263,9 @@ $cost = "";
         </div>
 
         <div class="modal fade" id="aboutRevit" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
-            <img id="AboutMACE" src="http://takshak.in/2017/public/images/aboutra.png" data-dismiss="modal">
+            <img id="AboutMACE" src="http://takshak.in/2017/public/images/aboutRevit.png" data-dismiss="modal">
         </div>
-
+ 
     </body>
 
         <!-- Javascript -->

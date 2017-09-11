@@ -7,8 +7,6 @@ class avishkar extends controller{
     }
 
     public function submit($get, $post){
-        // var_dump($get);
-        // var_dump($post);
         $name_of_uploaded_file2 = "";
         $name_of_uploaded_file =basename($_FILES['form-model']['name']);
         if(isset($_FILES['form-photo'])){
@@ -16,7 +14,6 @@ class avishkar extends controller{
         }
         $formData = $post;
         $this->getFile( $name_of_uploaded_file, $name_of_uploaded_file2, $formData );
-        // header("Locaton: http://takshak.in");
     }
 
     protected function getFile( $filename, $filename2, $formData ) {

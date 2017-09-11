@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Ashwin Joseph
- * Date: 24-08-2017
- * Time: 00:25
+ * Date: 27-08-2017
+ * Time: 18:40
  */
 
 class revit extends controller
@@ -14,6 +14,7 @@ class revit extends controller
 
     public function submit($get, $post){
         $formData = $post;
+//        echo "This is under Testing";
         $this->sendMailAsAttachment($formData);
     }
 
@@ -34,20 +35,13 @@ class revit extends controller
         // email fields: to, from, subject, and so on
         $to = "soorajpradeep97@gmail.com, ashwinkjoseph@gmail.com";
         $from = "revit@takshak.in";
-        $subject ="New Registration for Revit";
+        $subject ="New Registration for Revit Workshop";
         $message = "Uploaded File\n";
-        $message .= "School Name :". $formData['form-school-name']."\n";
+        $message .= "Name :". $formData['form-name']."\n";
         $message .= "E-Mail :". $formData['form-email']."\n";
-        $message .= "Exam Zone :". $formData['form-preferred-exam-zone']."\n";
         $message .= "Contact Number :". $formData['form-contact']."\n";
-        $i = 0;
-        for($i = 1; $i<3; $i++){
-            if(isset($formData['form-member-1-name'])){
-                $message .= "Student".$i." \n";
-                $message .= "Name :". $formData['form-member-'.$i.'-name']."\n";
-                $message .= "Class :". $formData['form-member-'.$i.'-class']."\n";
-            }
-        }
+        $message .= "College Name :". $formData['form-college-name']."\n";
+        $message .= "Accomodation :". $formData['form-accomodation']."\n";
         $headers = "From: $from";
 
         // boundary
@@ -72,5 +66,4 @@ class revit extends controller
         return $emailData;
 
     }
-
 }
